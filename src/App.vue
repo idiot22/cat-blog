@@ -23,5 +23,6 @@ body{
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  height: 100%;
 }
 </style>
