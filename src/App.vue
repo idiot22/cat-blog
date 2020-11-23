@@ -18,7 +18,7 @@ body{
   font-size: 12px
 }
 #app {
-  font-family: eafont,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"å¾®è½¯é›…é»‘",STHeitiSC-Light,simsun,"å®‹ä½“",WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
