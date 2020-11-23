@@ -8,7 +8,17 @@
         <p class="name">喵喵喵</p>
         <p class="info">喵喵喵的博客呀</p>
         <div class="link-wraper">
-
+          <tool-tip poptipText="qq" color='red'>
+            <i class="iconfont icon-qq"></i>
+          </tool-tip>
+          &nbsp;&nbsp;&nbsp;
+          <tool-tip poptipText='微信'>
+            <i class="iconfont icon-weixin"></i>
+          </tool-tip>
+          &nbsp;&nbsp;&nbsp;
+          <tool-tip poptipText='小破站'>
+            <i class="iconfont icon-bilibili-line"></i>
+          </tool-tip>
         </div>
       </div>
       <div class="new-article-wraper">
@@ -23,8 +33,9 @@
 </template>
 
 <script>
+import toolTip from '../components/toolTip'
 export default {
-
+  components:{toolTip}
 }
 </script>
 
@@ -66,6 +77,19 @@ export default {
       .info{
         color: #999;
         text-align: center;
+      }
+      .link-wraper{
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        color: rgb(168, 168, 168);
+        .tool-tip{
+          margin: 10px;
+          .iconfont{
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
