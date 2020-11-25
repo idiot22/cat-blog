@@ -1,5 +1,5 @@
 <template>
-  <div class="home-wraper">
+  <div class="body-wraper">
     <div class="left">
       <div class="person-info-wraper">
         <div class="avatar-wraper">
@@ -8,24 +8,36 @@
         <p class="name">喵喵喵</p>
         <p class="info">喵喵喵的博客呀</p>
         <div class="link-wraper">
-          <tool-tip poptipText="qq" color='red'>
+          <tool-tip popText="qq" color='red'>
             <i class="iconfont icon-qq"></i>
           </tool-tip>
           &nbsp;&nbsp;&nbsp;
-          <tool-tip poptipText='微信'>
+          <tool-tip popText='微信'>
             <i class="iconfont icon-weixin"></i>
           </tool-tip>
           &nbsp;&nbsp;&nbsp;
-          <tool-tip poptipText='小破站'>
+          <tool-tip popText='小破站'>
             <i class="iconfont icon-bilibili-line"></i>
           </tool-tip>
         </div>
       </div>
       <div class="new-article-wraper">
-
+        <card-simple title="热门文章">
+          <p>下辈子，我想当个主子</p>
+          <p>下辈子，我想当个主子</p>
+          <p>下辈子，我想当个主子</p>
+          <p>下辈子，我想当个主子</p>
+          <p>下辈子，我想当个主子</p>
+        </card-simple>
       </div>
-      <div class="">
-
+      <div class="tags-wraper">
+        <card-simple title="标签分类">
+          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='#22e9e6'>前端</tag><tag color='#ffcd26'>前端</tag>
+          <tag color='#ff7701'>前端</tag><tag color='#3cdd7f'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+        </card-simple>
       </div>
     </div>
     <div class="right"></div>
@@ -34,26 +46,28 @@
 
 <script>
 import toolTip from '../components/toolTip'
+import cardSimple from '../components/card/card-simple'
+import tag from '../components/tag'
 export default {
-  components:{toolTip}
+  components:{toolTip, cardSimple,tag}
 }
 </script>
 
 <style lang='scss' scoped>
-.home-wraper{
-  padding: 0px 30px;
+.body-wraper{
   display: flex;
   height: 100%;
+  justify-content: center;
   .left{
     width: 300px;
     background: white;
     height: 100%;
-    background: violet;
     height: 100%;
     .person-info-wraper{
       padding: 25px 0px;
       background: white;
       border-radius: 10px;
+      margin-bottom: 20px;
       .avatar-wraper{
         width: 100px;
         height: 100px;
@@ -92,12 +106,15 @@ export default {
         }
       }
     }
+    .new-article-wraper,.tags-wraper{
+      margin-bottom: 20px;
+    }
   }
   .right{
-    width: 100%;
+    width: 800px;
     height: 100%;
-    margin-left: 15px;
-    background: yellow;
+    margin-left: 30px;
+    background: white;
   }
 }
 </style>
