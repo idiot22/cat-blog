@@ -1,5 +1,8 @@
 <template>
   <div class="body-wraper">
+    <div class="nav">
+
+    </div>
     <div class="left">
       <div class="person-info-wraper">
         <div class="avatar-wraper">
@@ -40,7 +43,22 @@
         </card-simple>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="recommend-content">
+        <div class="left">
+          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/01/beach-during-day-2941017-500x625.jpg'></img-text>
+        </div>
+        <div class="right">
+          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg'></img-text>
+          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/red-and-white-mail-box-3703429-500x333.jpg'></img-text>
+        </div>
+      </div>
+      <card-article1></card-article1>
+      <card-article1></card-article1>
+      <card-article1></card-article1>
+      <card-article1></card-article1>
+      <card-article1></card-article1>
+    </div>
   </div>
 </template>
 
@@ -48,8 +66,10 @@
 import toolTip from '../components/toolTip'
 import cardSimple from '../components/card/card-simple'
 import tag from '../components/tag'
+import cardArticle1 from '../components/card/card-article1'
+import imgText from '../components/image/img-text'
 export default {
-  components:{toolTip, cardSimple,tag}
+  components:{toolTip, cardSimple,tag,cardArticle1, imgText}
 }
 </script>
 
@@ -58,12 +78,21 @@ export default {
   display: flex;
   height: 100%;
   justify-content: center;
+  padding-top: 100px;
+  .nav{
+    position: fixed;
+    top:0px;
+    width: 1110px;
+    height: 80px;
+    background: white;
+    border-radius: 10px;
+  }
   .left{
     width: 300px;
-    background: white;
     height: 100%;
     height: 100%;
     .person-info-wraper{
+      box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.05);
       padding: 25px 0px;
       background: white;
       border-radius: 10px;
@@ -114,7 +143,41 @@ export default {
     width: 800px;
     height: 100%;
     margin-left: 30px;
-    background: white;
+    overflow-y: scroll;
+      /**滚动条样式**/
+    &::-webkit-scrollbar{
+      width: 8px;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: rgba(71, 70, 70,0.1);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track{
+      background: rgba(71, 70, 70,0.05);
+      border-radius: 10px;
+    }
+    .recommend-content{
+      background: white;
+      height: 320px;
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      .left{
+        width: 49%;
+      }
+      .right{
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px;
+        .img-text-wraper{
+          height: 47.5%;
+        }
+      }
+    }
   }
 }
 </style>

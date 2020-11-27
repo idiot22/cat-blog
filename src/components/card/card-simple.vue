@@ -18,6 +18,7 @@ export default {
 .card-simple{
   background: white;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.05);
   header{
     padding: 15px 20px;
     color: #888;
