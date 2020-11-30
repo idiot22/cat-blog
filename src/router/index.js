@@ -11,11 +11,16 @@ export default new Router({
     path: '/login',
     component: () => import('@/pages/Login.vue')
   },
- {
-   path: '/demo1',
-   component: () => import('@/demo/demo1.vue')
- }, {
-  path: '/demo2',
-  component: () => import('@/demo/demo2.vue')
+  {
+    path: '/demo1',
+    component: () => import('@/demo/demo1.vue')
+  },
+  {
+    path: '/demo2',
+    component: () => import('@/demo/demo2.vue')
+  },
+  {
+    path: '/time-axis',
+    component: () => import('@/pages/TimeAxis.vue')
   }]
 })

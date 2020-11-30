@@ -143,7 +143,6 @@ export default {
     width: 800px;
     height: 100%;
     margin-left: 30px;
-    overflow-y: scroll;
       /**滚动条样式**/
     &::-webkit-scrollbar{
       width: 8px;
