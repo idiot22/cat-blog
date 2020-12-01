@@ -22,5 +22,8 @@ export default new Router({
   {
     path: '/time-axis',
     component: () => import('@/pages/TimeAxis.vue')
+  },{
+    path: '/message-board',
+    component: () => import('@/pages/MessageBoard')
   }]
 })
