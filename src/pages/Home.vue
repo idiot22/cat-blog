@@ -1,7 +1,7 @@
 <template>
   <div class="body-wraper">
     <div class="nav">
-
+      <scale-nav></scale-nav>
     </div>
     <div class="left">
       <div class="person-info-wraper">
@@ -68,10 +68,14 @@ import cardSimple from '../components/card/card-simple'
 import tag from '../components/tag'
 import cardArticle1 from '../components/card/card-article1'
 import imgText from '../components/image/img-text'
+import iconBtn from '../components/Button/icon-btn'
+import scaleNav from '../components/Navigation/scaleNav'
+import ScaleNav from '../components/Navigation/scaleNav.vue'
 export default {
-  components:{toolTip, cardSimple,tag,cardArticle1, imgText}
+  components:{toolTip, cardSimple,tag,cardArticle1, imgText, iconBtn, scaleNav}
 }
 </script>
+    ScaleNav
 
 <style lang='scss' scoped>
 .body-wraper{
@@ -80,12 +84,12 @@ export default {
   justify-content: center;
   padding-top: 100px;
   .nav{
-    position: fixed;
+    position: absolute;
     top:0px;
-    width: 1110px;
-    height: 80px;
-    background: white;
-    border-radius: 10px;
+    // width: 1110px;
+    // height: 80px;
+    // background: white;
+    // border-radius: 10px;
   }
   .left{
     width: 300px;
