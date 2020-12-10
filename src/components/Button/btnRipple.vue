@@ -1,5 +1,5 @@
 <template>
-    <button :style="{borderRadius: btnRadius+'px',width: width + 'px',height: height + 'px',backgroundColor: btnColor}">
+    <button :style="{borderRadius: btnRadius+'px',height: height,backgroundColor: btnColor, color:fontColor,paddingRight: paddingRow, paddingLeft: paddingRow}">
       <canvas @click="ripple"></canvas>
       <slot></slot>
     </button>
@@ -10,30 +10,33 @@ import { getStyleNumer } from '../../utils/css'
 export default {
   props:{
     speed: {
-      default: 3,
+      default: 4,
       type: Number
     },
     btnRadius: {
       default: 5,
       type: Number
     },
-    width: {
-      default: 100,
-      type: Number
+    paddingRow: {
+      default: '30px'
     },
     height: {
-      default: 40,
-      type: Number
+      default: '40px'
     },
     btnColor: {
       type: String
+    },
+    rippleColor:{
+      default: 'rgb(255, 255, 255)'
+    },
+    fontColor:{
+      default: 'rgb(255, 255, 255)'
     }
   },
   data(){
     return{
       canvas: null,
       initialized: false,
-      rippleColor: 'rgb(255, 255, 255)',
       cxt: null,
       origin: {
         x: 0,
@@ -102,10 +105,15 @@ button{
   outline: none;
   overflow: hidden;
   position: relative;
+  font-size: 15px;
+  white-space: nowrap;
+  box-sizing: border-box;
   canvas{
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 100%;
+    height: 100%;
   }
 }
 .btn-red {

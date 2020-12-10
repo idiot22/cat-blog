@@ -10,16 +10,25 @@
           </div>
       </div>
       <div class="right">
-          <ul class="link-wraper">
+          <ul class="link-wraper" :class="extendNav ? '' :'zeroWidth'">
               <li>
-                  <btn-ripple>首页</btn-ripple>
+                  <btn-ripple rippleColor='black' btnColor='white' fontColor='#333' height='100%' width='75px'>首页</btn-ripple>
               </li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                  <btn-ripple rippleColor='black' btnColor='white' fontColor='#333' height='100%' width='75px'>分类</btn-ripple>
+              </li>
+              <li>
+                  <btn-ripple rippleColor='black' btnColor='white' fontColor='#333' height='100%' width='75px'>标签</btn-ripple>
+              </li>
+              <li>
+                  <btn-ripple rippleColor='black' btnColor='white' fontColor='#333' height='100%' width='75px'>时间轴</btn-ripple>
+              </li>
+              <li>
+                  <btn-ripple rippleColor='black' btnColor='white' fontColor='#333' height='100%' width='75px'>留言</btn-ripple>
+              </li>
           </ul>
           <div class="icon">
-              <icon-btn :btnType="'extend'" @click="extendNav === true"></icon-btn>
+              <icon-btn :btnType="extendNav? 'scale':'extend'" @click.native="extend"></icon-btn>
           </div>
       </div>
   </div>
@@ -34,21 +43,30 @@ export default {
         return{
             extendNav: false
         }
+    },
+    methods:{
+        extend(){
+            this.extendNav = !this.extendNav
+        }
     }
 }
 </script>
 
 <style lang='scss' scoped>
 .scale-nav-wraper{
-    height: 50px;
-    padding: 15px 20px;
     background: rgb(255, 255, 255);
     min-width: 360px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+    padding: 0px 20px;
     .left{
+        padding: 10px 20px;
         display: flex;
+        height: 50px;
+        position: relative;
+        z-index: 100;
         .img-wraper{
             width: 48px;
             height: 48px;
@@ -75,9 +93,27 @@ export default {
         }
     }
     .right{
+        display: flex;
+        transition: 1s all ease;
+        position: relative;
         .link-wraper{
-
+            display: flex;
+            font-size: 14px;
+            transition: 1s all ease;
+            li{
+                height: 100%;
+            }
+        }
+        .icon{
+            display: flex;
+            align-items: center;
         }
     }
+}
+.zeroWidth{
+    transition: 1s all ease;
+    overflow: hidden;
+    transform: translateX(-100%);
+    opacity: 0;
 }
 </style>

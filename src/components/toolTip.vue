@@ -23,9 +23,6 @@ export default {
     return{
       $poptipBg: this.color
     }
-  },
-  mounted(){
-    console.log(this.$poptipBg)
   }
 }
 </script>

@@ -1,63 +1,65 @@
 <template>
   <div class="body-wraper">
-    <div class="nav">
-      <scale-nav></scale-nav>
-    </div>
-    <div class="left">
-      <div class="person-info-wraper">
-        <div class="avatar-wraper">
-          <img src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/01/stock-photo-1005217204-1-100x100.png" alt="" srcset="">
-        </div>
-        <p class="name">喵喵喵</p>
-        <p class="info">喵喵喵的博客呀</p>
-        <div class="link-wraper">
-          <tool-tip popText="qq" color='red'>
-            <i class="iconfont icon-qq"></i>
-          </tool-tip>
-          &nbsp;&nbsp;&nbsp;
-          <tool-tip popText='微信'>
-            <i class="iconfont icon-weixin"></i>
-          </tool-tip>
-          &nbsp;&nbsp;&nbsp;
-          <tool-tip popText='小破站'>
-            <i class="iconfont icon-bilibili-line"></i>
-          </tool-tip>
-        </div>
+    <div class="wraper">
+      <div class="nav">
+        <scale-nav></scale-nav>
       </div>
-      <div class="new-article-wraper">
-        <card-simple title="热门文章">
-          <p>下辈子，我想当个主子</p>
-          <p>下辈子，我想当个主子</p>
-          <p>下辈子，我想当个主子</p>
-          <p>下辈子，我想当个主子</p>
-          <p>下辈子，我想当个主子</p>
-        </card-simple>
-      </div>
-      <div class="tags-wraper">
-        <card-simple title="标签分类">
-          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='#22e9e6'>前端</tag><tag color='#ffcd26'>前端</tag>
-          <tag color='#ff7701'>前端</tag><tag color='#3cdd7f'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
-          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
-          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
-          <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
-        </card-simple>
-      </div>
-    </div>
-    <div class="right">
-      <div class="recommend-content">
-        <div class="left">
-          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/01/beach-during-day-2941017-500x625.jpg'></img-text>
+      <div class="left">
+        <div class="person-info-wraper">
+          <div class="avatar-wraper">
+            <img src="http://demo.qzhai.net/gohan/wp-content/uploads/2020/01/stock-photo-1005217204-1-100x100.png" alt="" srcset="">
+          </div>
+          <p class="name">喵喵喵</p>
+          <p class="info">喵喵喵的博客呀</p>
+          <div class="link-wraper">
+            <tool-tip popText="qq" color='red'>
+              <i class="iconfont icon-qq"></i>
+            </tool-tip>
+            &nbsp;&nbsp;&nbsp;
+            <tool-tip popText='微信'>
+              <i class="iconfont icon-weixin"></i>
+            </tool-tip>
+            &nbsp;&nbsp;&nbsp;
+            <tool-tip popText='小破站'>
+              <i class="iconfont icon-bilibili-line"></i>
+            </tool-tip>
+          </div>
         </div>
-        <div class="right">
-          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg'></img-text>
-          <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/red-and-white-mail-box-3703429-500x333.jpg'></img-text>
+        <div class="new-article-wraper">
+          <card-simple title="热门文章">
+            <p>下辈子，我想当个主子</p>
+            <p>下辈子，我想当个主子</p>
+            <p>下辈子，我想当个主子</p>
+            <p>下辈子，我想当个主子</p>
+            <p>下辈子，我想当个主子</p>
+          </card-simple>
+        </div>
+        <div class="tags-wraper">
+          <card-simple title="标签分类">
+            <tag color='rgb(242, 109, 109)'>前端</tag><tag color='#22e9e6'>前端</tag><tag color='#ffcd26'>前端</tag>
+            <tag color='#ff7701'>前端</tag><tag color='#3cdd7f'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+            <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+            <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+            <tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag><tag color='rgb(242, 109, 109)'>前端</tag>
+          </card-simple>
         </div>
       </div>
-      <card-article1></card-article1>
-      <card-article1></card-article1>
-      <card-article1></card-article1>
-      <card-article1></card-article1>
-      <card-article1></card-article1>
+      <div class="right">
+        <div class="recommend-content">
+          <div class="left">
+            <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/01/beach-during-day-2941017-500x625.jpg'></img-text>
+          </div>
+          <div class="right">
+            <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/casual-cute-female-friends-206409-scaled-500x333.jpg'></img-text>
+            <img-text url='http://demo.qzhai.net/gohan/wp-content/uploads/2020/03/red-and-white-mail-box-3703429-500x333.jpg'></img-text>
+          </div>
+        </div>
+        <card-article1></card-article1>
+        <card-article1></card-article1>
+        <card-article1></card-article1>
+        <card-article1></card-article1>
+        <card-article1></card-article1>
+      </div>
     </div>
   </div>
 </template>
@@ -68,28 +70,27 @@ import cardSimple from '../components/card/card-simple'
 import tag from '../components/tag'
 import cardArticle1 from '../components/card/card-article1'
 import imgText from '../components/image/img-text'
-import iconBtn from '../components/Button/icon-btn'
 import scaleNav from '../components/Navigation/scaleNav'
-import ScaleNav from '../components/Navigation/scaleNav.vue'
 export default {
-  components:{toolTip, cardSimple,tag,cardArticle1, imgText, iconBtn, scaleNav}
+  components:{toolTip, cardSimple,tag,cardArticle1, imgText, scaleNav}
 }
 </script>
-    ScaleNav
-
 <style lang='scss' scoped>
 .body-wraper{
   display: flex;
-  height: 100%;
   justify-content: center;
+  height: 100%;
   padding-top: 100px;
+  .wraper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+  }
   .nav{
     position: absolute;
     top:0px;
-    // width: 1110px;
-    // height: 80px;
-    // background: white;
-    // border-radius: 10px;
+    left: 0px;
   }
   .left{
     width: 300px;
@@ -167,6 +168,8 @@ export default {
       margin-bottom: 30px;
       display: flex;
       justify-content: space-between;
+      box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.05);
+      border-radius: 10px;
       .left{
         width: 49%;
       }
