@@ -61,6 +61,7 @@ export default {
     justify-content: space-between;
     box-shadow: 0 2px 15px rgba(0,0,0,0.02);
     padding: 0px 20px;
+    transition: 1s all ease;
     .left{
         padding: 10px 20px;
         display: flex;
@@ -115,5 +116,6 @@ export default {
     overflow: hidden;
     transform: translateX(-100%);
     opacity: 0;
+    width: 0px;
 }
 </style>

@@ -99,7 +99,6 @@ export default {
 button{
   background: #4799f0;
   color: white;
-  width: 100px;
   height: 30px;
   border: none;
   outline: none;

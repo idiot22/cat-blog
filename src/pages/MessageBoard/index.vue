@@ -1,18 +1,18 @@
 <template>
   <div class="message-board-wraper">
-    <btn>波浪按钮</btn>
+    <MessageInput></MessageInput>
   </div>
 </template>
 
 <script>
-import btn from '../../components/Button/btnRipple'
+import MessageInput from '../../components/MessageInput/messageInput'
 export default {
-  components:{
-    btn
-  }
+  components: {MessageInput}
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+.message-board-wraper{
+  width: 800px;
+}
 </style>
