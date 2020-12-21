@@ -1,6 +1,8 @@
 <template>
-  <div class="message-board-wraper">
-    <MessageInput></MessageInput>
+  <div class="wraper">
+    <div class="message-board-wraper">
+      <MessageInput></MessageInput>
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,11 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.message-board-wraper{
-  width: 800px;
+.wraper{
+    display: flex;
+    justify-content: center;
+  .message-board-wraper{
+    width: 800px;
+  }
 }
 </style>
