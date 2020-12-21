@@ -21,11 +21,16 @@
       </button>
     </div>
     <div class="textarea-wraper">
-      <textarea name="" id="" cols="30" rows="10" @focus="jujiao = true" @blur="jujiao = false" :class="jujiao ? 'textarea-wraper-active' : ''"></textarea>
+      <textarea  v-model="commentText" @focus="jujiao = true" @blur="jujiao = false" :class="jujiao ? 'textarea-wraper-active' : ''"></textarea>
     </div>
     <div class="look-wraper">
       <i class="iconfont icon-chenggongbiaoqing"></i>
       <i class="iconfont icon-2yulan"></i>
+    </div>
+    <div class="emotion-wraper">
+      <div class="emotion" v-for="(item, index) in emojiTextList" :key="index" @click="clickEmoji(item)">
+        <img :src="`https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/${emojiTextList.indexOf(item)}.gif`">
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +39,15 @@
 export default {
   data(){
     return{
-      jujiao: false
+      jujiao: false,
+      emojiTextList: ['微笑', '撇嘴', '色', '发呆', '得意', '流泪', '害羞', '闭嘴', '睡', '大哭', '尴尬', '发怒', '调皮', '呲牙', '惊讶', '难过', '酷', '冷汗', '抓狂', '吐', '偷笑', '可爱', '白眼', '傲慢', '饥饿', '困', '惊恐', '流汗', '憨笑', '大兵', '奋斗', '咒骂', '疑问', '嘘', '晕', '折磨', '衰', '骷髅', '敲打', '再见', '擦汗', '抠鼻', '鼓掌', '糗大了', '坏笑', '左哼哼', '右哼哼', '哈欠', '鄙视', '委屈', '快哭了', '阴险', '亲亲', '吓', '可怜', '菜刀', '西瓜', '啤酒', '篮球', '乒乓', '咖啡', '饭', '猪头', '玫瑰', '凋谢', '示爱', '爱心', '心碎', '蛋糕', '闪电', '炸弹', '刀', '足球', '瓢虫', '便便', '月亮', '太阳', '礼物', '拥抱', '强', '弱', '握手', '胜利', '抱拳', '勾引', '拳头', '差劲', '爱你', 'NO', 'OK', '爱情', '飞吻', '跳跳', '发抖', '怄火', '转圈', '磕头', '回头', '跳绳', '挥手', '激动', '街舞', '献吻', '左太极', '右太极'],
+      emojiList: [],
+      commentText:''
+    }
+  },
+  methods:{
+    clickEmoji(item){
+      this.commentText += ` :${item}:`
     }
   }
 }
@@ -83,7 +96,7 @@ export default {
   }
   .look-wraper{
     text-align: end;
-    padding-top: 10px;
+    padding: 10px 0px;
     color: #626262;
     cursor: pointer;
     i{
@@ -91,5 +104,38 @@ export default {
       padding-left: 10px;
     }
   }
-}
+  .emotion-wraper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: scroll;
+    .emotion{
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      padding: 10px;
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  /**滚动条样式**/
+  .emotion-wraper::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 10px;
+  }
+  .emotion-wraper::-webkit-scrollbar-thumb{
+    background: rgba(71, 70, 70,0.2);
+    border-radius: 10px;
+  }
+  .emotion-wraper::-webkit-scrollbar-track{
+    background: rgba(71, 70, 70,0.1);
+    border-radius: 10px;
+  }
+  }
 </style>
