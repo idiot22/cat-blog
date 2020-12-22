@@ -27,18 +27,14 @@
 </template>
 
 <script>
-import catForm from '../components/form/cat-form'
-import catFormItem from '../components/form/cat-form-item'
+import catForm from '../form/cat-form'
+import catFormItem from '../form/cat-form-item'
 export default {
   components:{catForm, catFormItem},
   data(){
     return{
       isFocus: false
     }
-  },
-  created(){
-    let arr = ['黄焖鸡', '猪脚饭', '脆皮鸡饭', '兰州拉面', '陕西面馆', '沙县酒店', '麻辣香锅']
-    console.log(arr[Math.floor(Math.random()*arr.length)])
   }
 }
 </script>
@@ -118,7 +114,7 @@ export default {
 }
 .mask{
   opacity: 0.46;
-  background: rgb(33, 33, 33);
+  background-color: rgb(33, 33, 33);
   width: 100%;
   height: 100%;
   position: absolute;
