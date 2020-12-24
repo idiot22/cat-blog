@@ -44,7 +44,7 @@ export default {
       },
       radius: 0,
       speedOpacity: 0,
-      opacity: 0.4,
+      opacity: 0.6,
       timer: null
     }
   },

@@ -2,8 +2,8 @@
   <div class="cat-form-item">
     <div class="form-item">
       <label>{{label}}<span v-if='required'>*</span></label>
-        <div >
-          <input :type="visible ? 'text' : 'password'" @blur="warnFunc" v-model="value" class="input-wraper">
+        <div>
+          <input :type="visible ? 'text' : 'password'" @blur="warnFunc" v-model="value" class="input-wraper" :class="isFocus ? 'input-wraper-alive' : ''" @focus="isFocus = true ">
           <div class="icon" @click='visible = !visible' v-if='pwd'>
             <i class="iconfont icon-visible-full" v-show="visible"></i>
             <i class="iconfont icon-invisible" v-show="!visible"></i>
@@ -37,11 +37,13 @@ export default {
     return {
         value: '',
         visible: true,
-        warnText:''
+        warnText:'',
+        isFocus: false
       };
   },
   methods:{
     warnFunc(){
+      this.isFocus = false
       if(this.required && !this.value){
         this.warnText = this.label + '不能为空'
       }else{
@@ -88,6 +90,11 @@ export default {
           color: rgb(65, 65, 65);
           padding: 0px 20px;
           box-sizing: border-box;
+        }
+        .input-wraper-alive{
+          background-color: white;
+          border: solid 1px rgba(4, 120, 190, 0.4);
+          box-shadow: 0 0 0 4px rgba(4, 120, 190, 0.1);
         }
         .icon{
           margin-left: 10px;

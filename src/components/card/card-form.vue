@@ -2,22 +2,16 @@
   <div class="login-wraper">
     <div class="container-scroll-wraper">
       <div class="container">
-        <div class="head">
-            <i class="iconfont icon-fanhuijiantou"></i>
-        </div>
         <div class="login-box">
           <div class="title">
-            <div class='text1'>欢迎回来，</div>
-            <div class="text2">请填写以下信息进行登录</div>
+            <div class='text1'>{{title}}</div>
           </div>
           <cat-form>
-            <cat-form-item label="用户名" required>
-            </cat-form-item>
-            <cat-form-item label="密码" required pwd>
-            </cat-form-item>
+            <cat-form-item :label="item"  v-for="item in itemList" :key='item'></cat-form-item>
           </cat-form>
           <div class="btn-wraper">
-            <button>登录</button>
+            <btnRipple :rippleColor="'#f55'" :fontColor="'#e54d42'" :btnColor="'white'" @click.native='close'>取消</btnRipple>
+            <btnRipple :rippleColor="'#0478be'" :fontColor="'#0478be'" :btnColor="'white'" @click="confirm">确认</btnRipple>
           </div>
         </div>
       </div>
@@ -29,11 +23,21 @@
 <script>
 import catForm from '../form/cat-form'
 import catFormItem from '../form/cat-form-item'
+import btnRipple from '../Button/btnRipple'
 export default {
-  components:{catForm, catFormItem},
+  props:['title', 'itemList'],
+  components:{catForm, catFormItem, btnRipple},
   data(){
     return{
       isFocus: false
+    }
+  },
+  methods:{
+    close(){
+      this.$emit('closeCardForm')
+    },
+    confirm(){
+
     }
   }
 }
@@ -58,23 +62,12 @@ export default {
   width: 480px;
   position: relative;
   z-index: 1000;
-  .head{
-    padding: 12px 28px 0px;
-    height: 36px;
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
-    i{
-      cursor: pointer;
-    }
-  }
   .login-box{
     max-height: 90%;
     padding: 16px 28px 44px;
     .title{
-      padding-bottom: 30px;
+      padding: 20px 0px;
       .text1{
-        font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
@@ -84,16 +77,14 @@ export default {
       }
     }
     .btn-wraper{
-      margin-top: 20px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       button{
-        width: 240px;
-        height: 40px;
-        background-color: #f5f5f5;
+        padding: 10px 20px;
         border-radius: 10px;
         border: none;
         outline: none;
+        margin-left: 10px;
         cursor: pointer;
       }
     }
