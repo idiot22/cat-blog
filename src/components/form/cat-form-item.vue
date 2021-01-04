@@ -2,13 +2,13 @@
   <div class="cat-form-item">
     <div class="form-item">
       <label>{{label}}<span v-if='required'>*</span></label>
-        <div>
-          <input :type="visible ? 'text' : 'password'" @blur="warnFunc" v-model="value" class="input-wraper" :class="isFocus ? 'input-wraper-alive' : ''" @focus="isFocus = true ">
-          <div class="icon" @click='visible = !visible' v-if='pwd'>
-            <i class="iconfont icon-visible-full" v-show="visible"></i>
-            <i class="iconfont icon-invisible" v-show="!visible"></i>
-          </div>
+      <div>
+        <input :type="visible ? 'text' : 'password'" @blur="warnFunc" v-model="value" class="input-wraper" :class="isFocus ? 'input-wraper-alive' : ''" @focus="isFocus = true ">
+        <div class="icon" @click='visible = !visible' v-if='pwd'>
+          <i class="iconfont icon-visible-full" v-show="visible"></i>
+          <i class="iconfont icon-invisible" v-show="!visible"></i>
         </div>
+      </div>
       <p class="warning">{{warnText}}</p>
     </div>
   </div>

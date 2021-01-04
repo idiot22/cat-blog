@@ -35,10 +35,6 @@ export default {
     return{
       isFocus: false
     }
-  },
-  created(){
-    let arr = ['黄焖鸡', '猪脚饭', '脆皮鸡饭', '兰州拉面', '陕西面馆', '沙县酒店', '麻辣香锅']
-    console.log(arr[Math.floor(Math.random()*arr.length)])
   }
 }
 </script>
